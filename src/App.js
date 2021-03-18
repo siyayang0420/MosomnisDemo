@@ -14,16 +14,21 @@ function App() {
   const [changeLapel, setChangeLapel] = useState(Navy1ButtonNotch);
 
   function handleChangeJacket(v) {
-    //or
-    setChangeJacket(v);
-    // if (changeJacket === Navy1ButtonJacket) {
-    //   setChangeLapel(Navy1ButtonNotch);
-    // } else if (changeJacket === Navy3ButtonJacket) {
-    //   setChangeLapel(Navy3ButtonNotch);
-    // } else if (changeJacket === Navy6ButtonJacket) {
-    //   setChangeLapel(Navy6ButtonPeak);
+    if (v === Navy1ButtonJacket) {
+      setChangeLapel(Navy1ButtonNotch);
+      setChangeJacket(Navy1ButtonJacket)
+    } else if (v === Navy3ButtonJacket) {
+      setChangeJacket(Navy3ButtonJacket)
+      setChangeLapel(Navy3ButtonNotch);
+    } else {
+      setChangeJacket(Navy6ButtonJacket)
+      setChangeLapel(Navy6ButtonPeak);
+    } 
+    // else {
+    //   setChangeJacket(v);
     // }
   }
+
   function handleChangeLapel(v) {
     setChangeLapel(v);
   }
@@ -37,6 +42,15 @@ function App() {
           style={{ position: "absolute", top: 0, left: 0 }}
           src={changeJacket}
         ></img>
+        {changeLapel === Navy1ButtonNotch && (
+          <img
+            alt="jacket"
+            width="auto"
+            height="800"
+            style={{ position: "absolute", top: 0, left: 0 }}
+            src={Navy1ButtonJacket}
+          ></img>
+        )}
         {changeJacket === Navy1ButtonJacket && (
           <img
             alt="notch"
@@ -46,13 +60,13 @@ function App() {
             src={changeLapel}
           ></img>
         )}
-          <img
-            alt="notch"
-            width="auto"
-            height="800"
-            style={{ position: "absolute", top: 0, left: 0 }}
-            src={changeLapel}
-          ></img>
+        <img
+          alt="notch"
+          width="auto"
+          height="800"
+          style={{ position: "absolute", top: 0, left: 0 }}
+          src={changeLapel}
+        ></img>
         {changeJacket === Navy6ButtonJacket && (
           <img
             alt="notch"
