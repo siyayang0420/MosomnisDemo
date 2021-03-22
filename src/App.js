@@ -16,17 +16,14 @@ function App() {
   function handleChangeJacket(v) {
     if (v === Navy1ButtonJacket) {
       setChangeLapel(Navy1ButtonNotch);
-      setChangeJacket(Navy1ButtonJacket)
+      setChangeJacket(Navy1ButtonJacket);
     } else if (v === Navy3ButtonJacket) {
-      setChangeJacket(Navy3ButtonJacket)
+      setChangeJacket(Navy3ButtonJacket);
       setChangeLapel(Navy3ButtonNotch);
     } else {
-      setChangeJacket(Navy6ButtonJacket)
+      setChangeJacket(Navy6ButtonJacket);
       setChangeLapel(Navy6ButtonPeak);
-    } 
-    // else {
-    //   setChangeJacket(v);
-    // }
+    }
   }
 
   function handleChangeLapel(v) {
