@@ -31,12 +31,12 @@ function App() {
   }
   return (
     <div className="App">
-      <div style={{ width: "auto", height: 800 }}>
+      <div style={{ width: "auto", height: 800, display:"flex", justifyContent:'center', alignItems:'center' }}>
         <img
           alt="jacket"
           width="auto"
           height="800"
-          style={{ position: "absolute", top: 0, left: 0 }}
+          style={{ position: "absolute"}}
           src={changeJacket}
         ></img>
         {changeLapel === Navy1ButtonNotch && (
@@ -44,7 +44,7 @@ function App() {
             alt="jacket"
             width="auto"
             height="800"
-            style={{ position: "absolute", top: 0, left: 0 }}
+            style={{ position: "absolute"}}
             src={Navy1ButtonJacket}
           ></img>
         )}
@@ -53,7 +53,7 @@ function App() {
             alt="notch"
             width="auto"
             height="800"
-            style={{ position: "absolute", top: 0, left: 0 }}
+            style={{ position: "absolute"}}
             src={changeLapel}
           ></img>
         )}
@@ -61,7 +61,7 @@ function App() {
           alt="notch"
           width="auto"
           height="800"
-          style={{ position: "absolute", top: 0, left: 0 }}
+          style={{ position: "absolute"}}
           src={changeLapel}
         ></img>
         {changeJacket === Navy6ButtonJacket && (
@@ -69,7 +69,7 @@ function App() {
             alt="notch"
             width="auto"
             height="800"
-            style={{ position: "absolute", top: 0, left: 0 }}
+            style={{ position: "absolute" }}
             src={changeLapel}
           ></img>
         )}
